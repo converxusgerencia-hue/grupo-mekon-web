@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clients } from '../data/site';
+---
+<BaseLayout title="Referencias | Mekon e Ingenieria S.A.S." description="Organizaciones que han contado con Mekon e Ingenieria S.A.S. para servicios y proyectos industriales.">
+  <section class="page-hero"><div class="shell"><p class="breadcrumb">Inicio / Referencias</p><p class="eyebrow">Referencias</p><h1>Relaciones construidas desde la capacidad de respuesta y ejecucion tecnica.</h1><p>Organizaciones de sectores industriales, transporte, materiales y energia han confiado en nuestras capacidades de servicio.</p></div></section>
+  <section class="section mist"><div class="shell"><div class="section-head"><div><p class="eyebrow">Clientes y aliados</p><h2>Experiencia que se sustenta en trabajo ejecutado.</h2></div><p>Las referencias presentadas corresponden a organizaciones incluidas en el portafolio corporativo de Mekon.</p></div><div class="logo-grid">{clients.map((client) => <div><img src={`/images/clients/${client}.png`} alt={client.replaceAll('-', ' ')} /></div>)}</div></div></section>
+  <section class="cta-band"><div class="shell"><div><p class="eyebrow light">Contacto comercial</p><h2>Hablemos de las condiciones de su proximo proyecto.</h2></div><a class="button" href="/contacto/">Solicitar contacto</a></div></section>
+</BaseLayout>

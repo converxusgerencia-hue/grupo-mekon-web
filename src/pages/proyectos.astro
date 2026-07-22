@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { projects } from '../data/site';
+---
+<BaseLayout title="Proyectos industriales | Mekon e Ingenieria S.A.S." description="Portafolio de ejecucion de Mekon en montaje, obra civil, sistemas de proceso y estructuras industriales.">
+  <section class="page-hero"><div class="shell"><p class="breadcrumb">Inicio / Proyectos</p><p class="eyebrow">Experiencia de campo</p><h1>Frentes de trabajo que reflejan nuestra capacidad de ejecucion.</h1><p>Una muestra del tipo de soluciones que Mekon desarrolla para activos industriales, terminales, sistemas de proceso y obras complementarias.</p></div></section>
+  <section class="section"><div class="shell"><div class="project-grid">{projects.map((project) => <article class="project-card"><img src={project.image} alt={project.title} /><div><span>{project.category}</span><h3>{project.title}</h3><p>{project.text}</p></div></article>)}</div></div></section>
+  <section class="dark-band"><div class="shell dark-grid"><div><p class="eyebrow light">Metodo de ejecucion</p><h2>Coordinacion desde el frente de trabajo hasta la entrega.</h2></div><div class="tag-grid"><span>Planeacion de actividades</span><span>Control de materiales</span><span>Gestion HSEQ</span><span>Montajes especializados</span><span>Pruebas tecnicas</span><span>Documentacion de cierre</span></div></div></section>
+</BaseLayout>

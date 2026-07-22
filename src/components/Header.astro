@@ -1,0 +1,21 @@
+---
+import { services, site } from '../data/site';
+const pathname = Astro.url.pathname;
+const active = (path: string) => pathname === path || (path !== '/' && pathname.startsWith(path));
+---
+<div class="topbar"><div class="shell"><span>Diseno, ingenieria, metalmecanica y construccion civil</span><a href={`mailto:${site.commercialEmail}`}>{site.commercialEmail}</a><a href={site.phoneHref}>{site.phone}</a></div></div>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Inicio Mekon"><img src="/images/logo-mekon.png" alt="Mekon e Ingenieria S.A.S." /><span>MEKON <small>E INGENIERIA S.A.S.</small></span></a>
+    <nav class="desktop-nav" aria-label="Navegacion principal">
+      <a class:list={[{ active: active('/') }]} href="/">Inicio</a>
+      <a class:list={[{ active: active('/empresa') }]} href="/empresa">Empresa</a>
+      <details class="services-menu"><summary class:list={[{ active: active('/servicios') }]}>Servicios</summary><div class="services-panel"><a href="/servicios/">Ver todas las capacidades</a>{services.map((service) => <a href={`/servicios/${service.slug}/`}>{service.title}</a>)}</div></details>
+      <a class:list={[{ active: active('/integridad-de-activos') }]} href="/integridad-de-activos/">Integridad</a>
+      <a class:list={[{ active: active('/proyectos') }]} href="/proyectos/">Proyectos</a>
+      <a class:list={[{ active: active('/referencias') }]} href="/referencias/">Referencias</a>
+    </nav>
+    <a class="header-cta" href="/contacto/">Contacto comercial</a>
+    <details class="mobile-menu"><summary aria-label="Abrir menu">Menu</summary><nav>{['Inicio|/','Empresa|/empresa/','Servicios|/servicios/','Integridad de activos|/integridad-de-activos/','Proyectos|/proyectos/','Referencias|/referencias/','Contacto|/contacto/'].map((item) => { const [label, href] = item.split('|'); return <a href={href}>{label}</a>; })}</nav></details>
+  </div>
+</header>

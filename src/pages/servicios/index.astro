@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+import { services } from '../../data/site';
+---
+<BaseLayout title="Servicios industriales | Mekon e Ingenieria S.A.S." description="Servicios de montaje mecanico, tanques, proteccion contra incendios, infraestructura civil, automatizacion e integridad de activos.">
+  <section class="page-hero"><div class="shell"><p class="breadcrumb">Inicio / Servicios</p><p class="eyebrow">Portafolio tecnico</p><h1>Servicios organizados por especialidad y aplicacion industrial.</h1><p>Seleccione una linea para revisar su enfoque, aplicaciones y capacidades de ejecucion.</p></div></section>
+  <section class="section mist"><div class="shell"><div class="service-grid">{services.map((service) => <ServiceCard service={service} />)}</div></div></section>
+  <section class="cta-band"><div class="shell"><div><p class="eyebrow light">Requerimiento tecnico</p><h2>Definimos el alcance desde las condiciones reales de operacion.</h2></div><a class="button" href="/contacto/">Solicitar contacto</a></div></section>
+</BaseLayout>

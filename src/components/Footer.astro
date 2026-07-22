@@ -1,0 +1,11 @@
+---
+import { locations, site } from '../data/site';
+---
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div><a class="footer-brand" href="/"><img src="/images/logo-mekon.png" alt="Mekon" /><span>MEKON<br /><small>E INGENIERIA S.A.S.</small></span></a><p>Ingenieria aplicada para infraestructura industrial, integridad de activos y continuidad operativa.</p><a href={`mailto:${site.commercialEmail}`}>{site.commercialEmail}</a></div>
+    <div><h2>Enlaces</h2><a href="/empresa/">Empresa</a><a href="/servicios/">Servicios</a><a href="/proyectos/">Proyectos</a><a href="/referencias/">Referencias</a><a href="/contacto/">Contacto</a></div>
+    <div class="locations"><h2>Sedes y cobertura</h2>{locations.map((location) => <article><strong>{location.city}</strong><span>{location.address}</span>{location.phone && <a href={location.href}>{location.phone}</a>}</article>)}</div>
+  </div>
+  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} Mekon e Ingenieria S.A.S.</span><span>Todos los derechos reservados</span></div>
+</footer>

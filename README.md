@@ -1,8 +1,27 @@
-# Grupo Mekon - Sitio web corporativo
+# Grupo Mekon Web
 
-Propuesta web corporativa de Mekon e Ingenieria S.A.S., preparada como sitio estatico autocontenido y compatible con GitHub Pages.
+Sitio corporativo multipagina de Mekon e Ingenieria S.A.S. construido con Astro para publicacion estatica en Vercel.
 
-## Publicacion
+## Rutas principales
 
-El sitio se sirve directamente desde `index.html` en la rama `main`.
+- `/` Inicio
+- `/empresa/` Empresa
+- `/servicios/` Portafolio y fichas tecnicas
+- `/integridad-de-activos/` Proteccion catodica e integridad
+- `/proyectos/` Proyectos
+- `/referencias/` Referencias
+- `/contacto/` Contacto comercial
 
+## Desarrollo
+
+```bash
+npm install
+npm run dev
+```
+
+## Produccion
+
+```bash
+npm run check
+npm run build
+```

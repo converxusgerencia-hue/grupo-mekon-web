@@ -10,7 +10,7 @@ const canonical = new URL(Astro.url.pathname, site.url).toString();
 const schema = {
   '@context': 'https://schema.org', '@type': 'Organization', name: site.name, url: site.url,
   logo: new URL('/images/logo-mekon.png', site.url).toString(), email: site.commercialEmail,
-  telephone: site.phone, areaServed: ['Colombia', 'Peru'], description,
+  telephone: site.phone, areaServed: ['Colombia', 'Perú'], description,
 };
 ---
 <!doctype html>

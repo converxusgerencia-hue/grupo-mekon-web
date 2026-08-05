@@ -1,11 +1,40 @@
 ---
-import { locations, site } from '../data/site';
+import { locations, navItems, site } from '../data/site';
 ---
+
 <footer class="site-footer">
+  <div class="footer-backdrop"></div>
   <div class="shell footer-grid">
-    <div><a class="footer-brand" href="/"><img src="/images/logo-mekon.png" alt="Mekon" /><span>MEKON<br /><small>E INGENIERIA S.A.S.</small></span></a><p>Ingenieria aplicada para infraestructura industrial, integridad de activos y continuidad operativa.</p><a href={`mailto:${site.commercialEmail}`}>{site.commercialEmail}</a></div>
-    <div><h2>Enlaces</h2><a href="/empresa/">Empresa</a><a href="/servicios/">Servicios</a><a href="/proyectos/">Proyectos</a><a href="/referencias/">Referencias</a><a href="/contacto/">Contacto</a></div>
-    <div class="locations"><h2>Sedes y cobertura</h2>{locations.map((location) => <article><strong>{location.city}</strong><span>{location.address}</span>{location.phone && <a href={location.href}>{location.phone}</a>}</article>)}</div>
+    <section class="footer-brand">
+      <img src="/images/logo-mekon-white.svg" alt="Mekon e Ingeniería S.A.S." width="220" height="67" loading="lazy" />
+      <p>Ingeniería aplicada para proyectos industriales con exigencias reales de seguridad, calidad y continuidad operativa.</p>
+      <div class="social-links" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/grupomekon/" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </section>
+    <section>
+      <h2>Enlaces rápidos</h2>
+      <ul class="footer-links">
+        {navItems.map((item) => <li><a href={item.href}>{item.label}</a></li>)}
+      </ul>
+    </section>
+    <section class="footer-contact">
+      <h2>Contacto</h2>
+      <div class="locations">
+        {locations.map((location) => (
+          <div>
+            <strong>{location.city}</strong>
+            <span>{location.address}</span>
+          </div>
+        ))}
+      </div>
+      <a href={`mailto:${site.commercialEmail}`}>{site.commercialEmail}</a>
+      <a href={`tel:${site.phoneRaw}`}>{site.phone}</a>
+    </section>
   </div>
-  <div class="shell footer-bottom"><span>© {new Date().getFullYear()} Mekon e Ingenieria S.A.S.</span><span>Todos los derechos reservados</span></div>
+  <div class="shell footer-bottom">
+    <span>&copy; {new Date().getFullYear()} Mekon e Ingeniería S.A.S. Todos los derechos reservados.</span>
+    <a href={site.whatsapp} target="_blank" rel="noreferrer">Atención por WhatsApp</a>
+  </div>
 </footer>

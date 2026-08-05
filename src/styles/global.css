@@ -217,3 +217,25 @@ body{font-family:"Manrope",Arial,Helvetica,sans-serif;font-weight:500}
 @media(max-width:680px){.hero,.hero-content{min-height:560px}.hero h1{font-size:42px}.hero-stats strong{font-size:14px}.page-hero{padding:58px 0 52px}.page-hero h1{font-size:36px}.dark-band,.cta-band{padding:58px 0}.logo-grid{gap:8px;padding:8px}.logo-grid .client-logo{height:105px;padding:16px}}
 .client-logo.primax{--client-color:#f47d20}.client-logo.petromil{--client-color:#18a7e0;background:#0e2638}.client-logo.procargo{--client-color:#187bc2}.client-logo.joapetrol{--client-color:#c90022}
 .assurance-band{padding:76px 0;background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.assurance-band .shell{display:grid;grid-template-columns:minmax(0,1fr) 1.1fr;gap:70px;align-items:end}.assurance-band h2{max-width:570px;margin:0;font-size:clamp(31px,3.5vw,46px);font-weight:800;line-height:1.16}.assurance-band p:not(.eyebrow){max-width:590px;margin:16px 0 0;color:var(--steel);line-height:1.7}.assurance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.assurance-grid article{min-height:160px;padding:22px;background:var(--mist);border-top:3px solid var(--red)}.assurance-grid span,.assurance-grid strong,.assurance-grid small{display:block}.assurance-grid span{font-family:"Space Mono",monospace;color:var(--steel);font-size:11px;font-weight:700}.assurance-grid strong{margin:9px 0 15px;font-size:31px;line-height:1}.assurance-grid small{font-size:11px;line-height:1.5}.application-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.application-gallery figure{margin:0;background:#fff;border:1px solid var(--line)}.application-gallery img{width:100%;height:285px;object-fit:cover}.application-gallery figcaption{padding:13px 15px;color:var(--steel);font-size:12px;line-height:1.45}@media(max-width:860px){.assurance-band .shell{grid-template-columns:1fr;gap:30px}.application-gallery{grid-template-columns:1fr 1fr}}@media(max-width:680px){.assurance-band{padding:60px 0}.assurance-grid{grid-template-columns:1fr}.assurance-grid article{min-height:auto}.application-gallery{grid-template-columns:1fr}.application-gallery img{height:240px}}
+
+/* Navigation refinement */
+.nav-wrap{position:relative;display:flex;min-height:78px;align-items:center;gap:28px}
+.site-nav{margin-left:auto}
+.desktop-nav{margin:0;padding:0;list-style:none}
+.desktop-nav li{display:flex}
+.desktop-nav a{display:block;padding:30px 0;color:var(--ink);border-bottom:3px solid transparent;transition:color .18s ease,border-color .18s ease}
+.desktop-nav a:hover{color:var(--red);border-bottom-color:var(--red)}
+.mobile-nav{display:none}
+.mobile-nav summary{display:flex;align-items:center;gap:10px;min-height:42px;padding:0 14px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;font-size:12px;font-weight:800;text-transform:uppercase;list-style:none}
+.mobile-nav summary::-webkit-details-marker{display:none}
+.menu-toggle-icon{width:16px;height:11px;border-top:2px solid currentColor;border-bottom:2px solid currentColor;position:relative}
+.menu-toggle-icon:after{position:absolute;top:3px;left:0;width:100%;border-top:2px solid currentColor;content:""}
+.mobile-panel{position:absolute;top:calc(100% + 10px);right:0;width:min(330px,calc(100vw - 28px));padding:8px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 45px rgba(18,30,41,.18)}
+.mobile-panel ul{margin:0;padding:0;list-style:none}
+.mobile-panel li+li{border-top:1px solid var(--line)}
+.mobile-panel li a{display:block;padding:14px 12px;font-size:13px;font-weight:700}
+.mobile-panel li a:hover{color:var(--red);background:var(--mist)}
+.mobile-proposal{display:flex;min-height:46px;align-items:center;justify-content:center;margin:8px 0 0;padding:0 16px;color:#fff;background:var(--red);font-size:12px;font-weight:800;text-transform:uppercase}
+.mobile-proposal:hover{background:var(--red-deep)}
+@media(max-width:1040px){.nav-wrap{min-height:70px}.desktop-nav,.nav-wrap>.header-cta{display:none}.mobile-nav{display:block}.site-nav{margin-left:auto}.brand img{width:54px;height:54px}}
+@media(max-width:680px){.nav-wrap{min-height:66px;gap:14px}.brand img{width:48px;height:48px}.mobile-nav summary{min-height:40px;padding:0 12px}.topbar{font-size:9px}.topbar .shell{padding:7px 0}}

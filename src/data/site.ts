@@ -249,6 +249,39 @@ export const projects = [
   },
 ];
 
+export const rentalEquipment = [
+  {
+    title: 'Frac tank para almacenamiento temporal',
+    description: 'Unidad para contención, almacenamiento y manejo temporal de fluidos en operación.',
+    image: '/images/rental/frac-tank-full-hd.png',
+    alt: 'Frac tank industrial para almacenamiento temporal de fluidos',
+  },
+  {
+    title: 'Camión grúa articulada',
+    description: 'Equipo para cargue, descargue, movilización y apoyo de maniobras en campo.',
+    image: '/images/rental/camion-grua-full-hd.png',
+    alt: 'Camión con grúa articulada para apoyo logístico industrial',
+  },
+  {
+    title: 'Bomba sumergible para manejo de agua',
+    description: 'Equipo de bombeo para drenaje, transferencia y control de niveles en frentes operativos.',
+    image: '/images/rental/bomba-sumergible.jpeg',
+    alt: 'Bomba sumergible industrial para manejo de agua',
+  },
+  {
+    title: 'Módulo operativo móvil',
+    description: 'Infraestructura temporal para apoyo logístico, operación y presencia de personal en sitio.',
+    image: '/images/rental/modulo-operativo.jpeg',
+    alt: 'Módulo operativo móvil para instalación industrial',
+  },
+  {
+    title: 'Unidad móvil de proceso',
+    description: 'Skid integrado para manejo y tratamiento de fluidos en operaciones industriales.',
+    image: '/images/rental/unidad-proceso.jpeg',
+    alt: 'Unidad móvil de proceso para tratamiento de fluidos',
+  },
+];
+
 export const clients = [
   { name: 'Terpel', logo: '/images/clients/terpel.png' },
   { name: 'Gerdau Diaco', logo: '/images/clients/gerdau-diaco.png' },

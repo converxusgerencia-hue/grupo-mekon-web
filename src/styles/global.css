@@ -239,3 +239,14 @@ body{font-family:"Manrope",Arial,Helvetica,sans-serif;font-weight:500}
 .mobile-proposal:hover{background:var(--red-deep)}
 @media(max-width:1040px){.nav-wrap{min-height:70px}.desktop-nav,.nav-wrap>.header-cta{display:none}.mobile-nav{display:block}.site-nav{margin-left:auto}.brand img{width:54px;height:54px}}
 @media(max-width:680px){.nav-wrap{min-height:66px;gap:14px}.brand img{width:48px;height:48px}.mobile-nav summary{min-height:40px;padding:0 12px}.topbar{font-size:9px}.topbar .shell{padding:7px 0}}
+
+.rental-section{background:#fff;border-top:1px solid var(--line)}
+.rental-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.rental-card{overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 7px 20px rgba(18,30,41,.06)}
+.rental-card img{width:100%;height:250px;object-fit:cover;background:var(--mist)}
+.rental-card:nth-child(2) img,.rental-card:nth-child(5) img{object-fit:contain;padding:14px}
+.rental-card div{padding:20px}
+.rental-card h3{margin:0;color:var(--ink);font-size:18px;line-height:1.3}
+.rental-card p{margin:10px 0 0;color:var(--steel);font-size:13px;line-height:1.65}
+@media(max-width:860px){.rental-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.rental-grid{grid-template-columns:1fr}.rental-card img{height:230px}}

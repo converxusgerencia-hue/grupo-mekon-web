@@ -282,6 +282,27 @@ export const rentalEquipment = [
   },
 ];
 
+export const civilWorks = [
+  {
+    title: 'Pavimento industrial en concreto',
+    description: 'Preparación, fundida y acabado de placas para circulación y operación industrial.',
+    image: '/images/civil/pavimento-industrial.jpeg',
+    alt: 'Ejecución de pavimento industrial en concreto',
+  },
+  {
+    title: 'Báscula camionera de 80 toneladas',
+    description: 'Construcción de infraestructura civil, accesos y elementos de protección para operación de pesaje.',
+    image: '/images/civil/bascula-camionera.jpeg',
+    alt: 'Infraestructura civil para báscula camionera industrial',
+  },
+  {
+    title: 'Cimentación para tanque industrial',
+    description: 'Preparación de base, acero de refuerzo y obras complementarias para activos de almacenamiento.',
+    image: '/images/civil/cimentacion-tanque-aerea.jpeg',
+    alt: 'Cimentación circular para tanque industrial vista aérea',
+  },
+];
+
 export const clients = [
   { name: 'Terpel', logo: '/images/clients/terpel.png' },
   { name: 'Gerdau Diaco', logo: '/images/clients/gerdau-diaco.png' },

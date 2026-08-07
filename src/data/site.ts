@@ -303,6 +303,27 @@ export const civilWorks = [
   },
 ];
 
+export const structuralWorks = [
+  {
+    title: 'Montaje de tubería y plataformas',
+    description: 'Fabricación, instalación y soporte de líneas de proceso en infraestructura industrial.',
+    image: '/images/structures/montaje-tuberia-plataforma.jpeg',
+    alt: 'Montaje de tubería industrial bajo plataforma metálica',
+  },
+  {
+    title: 'Rack de tuberías de proceso',
+    description: 'Organización, soportación y conexionado de tuberías para operación controlada.',
+    image: '/images/structures/rack-tuberias-proceso.jpeg',
+    alt: 'Rack industrial de tuberías de proceso',
+  },
+  {
+    title: 'Estructura de cubierta para planta',
+    description: 'Estructura metálica y cubierta para protección de equipos y áreas operativas.',
+    image: '/images/structures/estructura-cubierta-nocturna.jpeg',
+    alt: 'Estructura metálica de cubierta para planta industrial',
+  },
+];
+
 export const clients = [
   { name: 'Terpel', logo: '/images/clients/terpel.png' },
   { name: 'Gerdau Diaco', logo: '/images/clients/gerdau-diaco.png' },

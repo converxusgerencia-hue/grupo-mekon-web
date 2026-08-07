@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { civilWorks, rentalEquipment, services } from '../../data/site';
+import { civilWorks, rentalEquipment, services, structuralWorks } from '../../data/site';
 
 export function getStaticPaths() {
   return services.map((service) => ({ params: { slug: service.slug }, props: { service } }));
@@ -17,6 +17,9 @@ const { service } = Astro.props;
   )}
   {service.slug === 'infraestructura-civil' && (
     <section class="section civil-works-section"><div class="shell"><div class="section-head"><div><p class="eyebrow">Obras ejecutadas</p><h2>Infraestructura civil con control de alcance, seguridad y condiciones de operación.</h2></div><p>Frentes de trabajo desarrollados para instalaciones industriales, almacenamiento y operación logística.</p></div><div class="civil-works-grid">{civilWorks.map((work) => <article class="civil-work-card"><img src={work.image} alt={work.alt} loading="lazy" /><div><h3>{work.title}</h3><p>{work.description}</p></div></article>)}</div></div></section>
+  )}
+  {service.slug === 'estructuras-y-fabricaciones' && (
+    <section class="section structural-works-section"><div class="shell"><div class="section-head"><div><p class="eyebrow">Estructuras ejecutadas</p><h2>Fabricación y montaje para procesos, equipos e infraestructura industrial.</h2></div><p>Aplicaciones desarrolladas con atención a accesibilidad, soportación, operación y condiciones de campo.</p></div><div class="structural-works-grid">{structuralWorks.map((work) => <article class="structural-work-card"><img src={work.image} alt={work.alt} loading="lazy" /><div><h3>{work.title}</h3><p>{work.description}</p></div></article>)}</div></div></section>
   )}
   <section class="section mist"><div class="shell"><div class="section-head"><div><p class="eyebrow">Evidencia de ejecución</p><h2>Aplicaciones en campo de esta especialidad.</h2></div><p>Imágenes de referencia de frentes de trabajo, equipos y actividades relacionadas con esta línea de servicio.</p></div><div class="application-gallery">{service.gallery.map((item) => <figure><img src={item.src} alt={item.alt} loading="lazy" /><figcaption>{item.alt}</figcaption></figure>)}</div></div></section>
 </BaseLayout>

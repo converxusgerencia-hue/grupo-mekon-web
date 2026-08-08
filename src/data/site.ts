@@ -324,6 +324,27 @@ export const structuralWorks = [
   },
 ];
 
+export const fluidTreatmentSystems = [
+  {
+    title: 'Skid de filtración dúplex',
+    description: 'Conjunto prefabricado para filtración, retención de sólidos y acondicionamiento de fluidos.',
+    image: '/images/fluids/skid-filtracion.jpeg',
+    alt: 'Skid industrial de filtración dúplex',
+  },
+  {
+    title: 'Unidad de filtración por prensa',
+    description: 'Equipo integrado para separación sólido-líquido y manejo de lodos de proceso.',
+    image: '/images/fluids/unidad-filtracion-prensa.jpeg',
+    alt: 'Unidad industrial de filtración por prensa',
+  },
+  {
+    title: 'Unidad móvil de separación',
+    description: 'Sistema transportable para tratamiento, acondicionamiento y manejo controlado de fluidos.',
+    image: '/images/fluids/unidad-movil-separacion.jpeg',
+    alt: 'Unidad móvil industrial para separación de fluidos',
+  },
+];
+
 export const clients = [
   { name: 'Terpel', logo: '/images/clients/terpel.png' },
   { name: 'Gerdau Diaco', logo: '/images/clients/gerdau-diaco.png' },
